@@ -1,7 +1,7 @@
 # Yt
 The idea was to make recommendation for required topics better than the YouTube recommendation. So to achieve this I started collecting different search results by using search().list() and using that data I retrieved the statistics(View Count, Like Count, Dislike Count, Favourite Count), Duration and Published At for the corresponding search results by passing the Video ID as argument to videos().list().
 ## Approach
-- My Approach for recommendation Technique was to implement a scoring function which gives scores based on the Duration of the Video, Like Count, View Count and Dislike Count of the video.
+- The Approach for recommendation Technique was to implement a scoring function which gives scores based on the Duration of the Video, Like Count, View Count and Dislike Count of the video.
 - Z-Score normalisation was used to normalize Duration, ViewCount, LikeCount, DislikeCount Columns.
 - Scoring Function was created by giving weights to Duration_zscore, Views_zscore, Likes_zscore, Dislikes_zscore.
 - Videos with very long duration tend to have lesser views compared to those with smaller duration which gives those videos a disadvantage so to even this out Duration was also given significant weight in the scoring function. 
